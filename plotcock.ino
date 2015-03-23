@@ -9,39 +9,39 @@
 // time library see http://playground.arduino.cc/Code/time 
 
 // delete or mark the next line as comment when done with calibration  
-//#define CALIBRATION
+#define CALIBRATION
 
 // When in calibration mode, adjust the following factor until the servos move exactly 90 degrees
-#define SERVOFAKTOR 665
+#define SERVOFAKTOR 700
 
 // Zero-position of left and right servo
 // When in calibration mode, adjust the NULL-values so that the servo arms are at all times parallel
 // either to the X or Y axis
-#define SERVOLEFTNULL 2100
-#define SERVORIGHTNULL 1400
+#define SERVOLEFTNULL 2650
+#define SERVORIGHTNULL 200
 
 #define SERVOPINLIFT  2
 #define SERVOPINLEFT  3
 #define SERVOPINRIGHT 4
 
 // lift positions of lifting servo
-#define LIFT0 1940 // on drawing surface
-#define LIFT1 1850  // between numbers
+#define LIFT0 1800 // on drawing surface
+#define LIFT1 1700  // between numbers
 #define LIFT2 1600  // going towards sweeper
 
 // speed of liftimg arm, higher is slower
-#define LIFTSPEED 1500
+#define LIFTSPEED 1300
 
 // length of arms
-#define L1 35
-#define L2 55.1
+#define L1 57
+#define L2 99
 #define L3 13.2
 
 
 // origin points of left and right servo 
-#define O1X 22
+#define O1X 56.5
 #define O1Y -25
-#define O2X 47
+#define O2X 81.5
 #define O2Y -25
 
 
@@ -63,7 +63,6 @@ int last_min = 0;
 void setup() 
 { 
   // Set current time only the first to values, hh,mm are needed
-  setTime(19,38,0,0,0,0);
 
   drawTo(75.2, 47);
   lift(0);
@@ -80,16 +79,14 @@ void loop()
 #ifdef CALIBRATION
 
   // Servohorns will have 90° between movements, parallel to x and y axis
-  lift(2);
   delay(500);
-  drawTo(-3, 29.2);
+  drawTo(-11.5, 76);
   delay(500);
-  drawTo(74.1, 28);
+  drawTo(143, 76);
   delay(500);
   lift(1);
   delay(500);
-  lift(0);
-  delay(500);
+  //lift(0);
 
 #else 
 
