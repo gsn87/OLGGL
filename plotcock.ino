@@ -55,8 +55,8 @@ Servo servo1;  //
 Servo servo2;  // 
 Servo servo3;  // 
 
-volatile double lastX = 75;
-volatile double lastY = 47.5;
+volatile double lastX = 148;
+volatile double lastY = 58;
 
 int last_min = 0;
 
@@ -64,7 +64,7 @@ void setup()
 { 
   // Set current time only the first to values, hh,mm are needed
 
-  drawTo(75.2, 47);
+  drawTo(148, 58);
   lift(0);
   servo1.attach(SERVOPINLIFT);  //  lifting servo
   servo2.attach(SERVOPINLEFT);  //  left servo
