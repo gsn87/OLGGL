@@ -1,3 +1,3 @@
 # OLGGL
 
-[using the link http://wiki.fablab-nuernberg.de/w/Datei:erklaerung.jpg]
+![alt tag](http://wiki.fablab-nuernberg.de/w/Datei:erklaerung.jpg)
